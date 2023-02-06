@@ -1,0 +1,51 @@
+1)
+touch q2.txt
+vi q2
+venkatramana
+lovely professional university
+Telangana
+india
+esc,enter,shift+colon,wq
+cat q2
+
+write a command to print second to 4th line with the line number.
+
+//////
+write a command to print a line the length is greater than 22.
+echo "This is a line with more than 22 characters." (rough)
+This is a line with more than 22 characters.
+
+2)
+#write a program to keep the file contains "n5.sh" into a variable and acces  those content using another file
+file="n5.sh"
+name=$(cat "$file")
+echo $name
+
+3)
+write a program to access varaiable which are defien in another file
+
+a=10
+b=20
+
+source n4.sh
+echo $a
+echo$b
+
+4)write a program to declare a function one which return sum of two function arguments. declare another function. which fetch sum of first function and calculate the average of that. 
+in shell program
+
+# Function to return the sum of two arguments
+sum() {
+local result=$(($1 + $2))
+echo $result
+}
+
+# Function to calculate the average of the sum of two arguments
+average() {
+local sum=$(sum $1 $2)
+local result=$(($sum / 2))
+echo $result
+}
+
+# Call the average function with two arguments
+average 5 10
